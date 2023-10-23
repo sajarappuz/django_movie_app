@@ -9,6 +9,6 @@
    <h1>title : {{movie.title | upper}}</h1> <!--  filter method  |" we can also add a default value using default filter-->
    <h3>year : {{movie.year}}</h3>  <!--variables {{variables}}-->
    <p>summary : {{movie.summary}}</p>
-
+    <a href="{% url 'edit' movie.id %}">edit</a> / <a href="{% url 'delete' movie.id %}">delete</a>
   {% endfor %}
 {% endblock content %}

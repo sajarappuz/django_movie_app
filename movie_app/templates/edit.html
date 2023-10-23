@@ -2,4 +2,12 @@
 
 {% block content %}    <!--block varibale-->
 <p>edit</p>          <!--override content-->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+ <!-- Title :  <input type="text" name="title">
+ Year : <input type="number" name="year">
+ Summary: <input type="text" name="summary"/> -->
+ {{ frm.as_p }}
+ <button type="submit">Submit</button>
+</form>
 {% endblock content %}
