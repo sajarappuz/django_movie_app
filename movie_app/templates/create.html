@@ -1,0 +1,12 @@
+{% extends 'inherit.html' %}   <!--for templates inheritance-->
+
+{% block content %}    <!--block varibale-->
+<p>create</p>          <!--override content-->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+ Title :  <input type="text" name="title">
+ Year : <input type="text" name="year">
+ Summary: <input type="text" name="summary"/>
+ <button type="submit">Submit</button>
+</form>
+{% endblock content %}

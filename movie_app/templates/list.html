@@ -1,0 +1,14 @@
+
+{% extends 'inherit.html' %}   <!--for templates inheritance-->
+<!-- {% load static  %} -->
+
+{% block content %}    <!--block varibale-->
+<p>list</p>          <!--override content-->
+   {% for movie in movies %}      
+    <!-- <img src="{% static 'images/' %}{{movie.img}}" alt=""> -->
+   <h1>title : {{movie.title | upper}}</h1> <!--  filter method  |" we can also add a default value using default filter-->
+   <h3>year : {{movie.year}}</h3>  <!--variables {{variables}}-->
+   <p>summary : {{movie.summary}}</p>
+
+  {% endfor %}
+{% endblock content %}

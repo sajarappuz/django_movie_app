@@ -1,0 +1,8 @@
+ 
+ {% for movie in movies %}      <!--tags {%tag%}-->
+ 
+ <h1>title : {{movie.title | upper}}</h1> <!--  filter method  |" we can also add a default value using default filter-->
+<h3>year : {{movie.year}}</h3>  <!--variables {{variables}}-->
+<p>summary : {{movie.summary}}</p>
+
+{% endfor %}
